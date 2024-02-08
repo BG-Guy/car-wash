@@ -3,6 +3,7 @@ import React from "react";
 import SVG from "@/blob-scene-haikei.svg";
 import { JosephineSans, openSans } from "@/fonts";
 import { ContactForm } from "./contact-form";
+import Image from "next/image";
 
 export const ContactUsSection = () => {
   const imageUrl =
@@ -39,11 +40,12 @@ export const ContactUsSection = () => {
         <div className="IMAGE-WRAPPER w-full">
           <img
             src={imageUrl}
+            alt="image"
             style={{
               clipPath: `url(#wavy-clip-path)`,
             }}
-            className="IMAGE object-cover "
-          ></img>
+            className="IMAGE object-cover  "
+          />
         </div>
       </div>
     </div>
