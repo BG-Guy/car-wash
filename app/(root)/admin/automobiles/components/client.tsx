@@ -16,9 +16,8 @@ export const AutomobileClient: React.FC<AutomobileClientProps> = ({ data }) => {
         description="Manage services for your store"
       />
       <Separator orientation="horizontal" className="my-4" />
-      <AutomobileForm initialData={data} />
+      <AutomobileForm />
       <Separator orientation="vertical" className="mb-4" />
-      {/* <DataTable columns={columns} initialData={data} /> */}
       <AutomobileTable columns={columns} initialData={data} />
     </div>
   );

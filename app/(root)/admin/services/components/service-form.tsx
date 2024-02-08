@@ -26,26 +26,17 @@ const formSchema = z.object({
 
 type ServiceFormValues = z.infer<typeof formSchema>;
 
-interface ServiceFormProps {
-  initialData: ServiceColumn;
-}
-
-export const ServiceForm: React.FC<ServiceFormProps> = ({ initialData }) => {
+export const ServiceForm = ({}) => {
   const [loading, setLoading] = useState(false);
   const params = useParams();
 
   const router = useRouter();
 
-  const defaultValues = initialData
-    ? {
-        ...initialData,
-        price: parseFloat(String(initialData?.price)),
-      }
-    : {
-        name: "",
-        price: 0,
-        description: "",
-      };
+  const defaultValues = {
+    name: "",
+    price: 0,
+    description: "",
+  };
 
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(formSchema),

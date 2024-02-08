@@ -19,9 +19,8 @@ export const ServiceClient: React.FC<ServiceClientProps> = ({ data }) => {
         description="Manage services for your store"
       />
       <Separator orientation="horizontal" className="my-4" />
-      <ServiceForm initialData={data} />
+      <ServiceForm />
       <Separator orientation="vertical" className="mb-4" />
-      {/* <DataTable columns={columns} initialData={data} /> */}
       <ServiceTable columns={columns} initialData={data} />
     </div>
   );

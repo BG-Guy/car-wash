@@ -11,12 +11,10 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { Automobile } from "@prisma/client";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
-import { AutomobileColumn } from "./column";
 import { toast } from "sonner";
 
 const formSchema = z.object({
@@ -27,28 +25,17 @@ const formSchema = z.object({
 
 type AutomobileFormValues = z.infer<typeof formSchema>;
 
-interface AutomobileFormProps {
-  initialData: AutomobileColumn;
-}
-
-export const AutomobileForm: React.FC<AutomobileFormProps> = ({
-  initialData,
-}) => {
+export const AutomobileForm = ({}) => {
   const [loading, setLoading] = useState(false);
   const params = useParams();
 
   const router = useRouter();
 
-  const defaultValues = initialData
-    ? {
-        ...initialData,
-        price: parseFloat(String(initialData?.price)),
-      }
-    : {
-        type: "",
-        price: 0,
-        description: "",
-      };
+  const defaultValues = {
+    type: "",
+    price: 0,
+    description: "",
+  };
 
   const form = useForm<AutomobileFormValues>({
     resolver: zodResolver(formSchema),
