@@ -63,11 +63,13 @@ export const SelectCell: React.FC<SelectCellProps> = async ({
     <div>
       <Select onValueChange={(value) => onChangeSelectLabel(value)}>
         <SelectTrigger className={`w-[130px] ${data.automobile}`}>
-          <SelectValue placeholder={data.} className={``} />
+          <SelectValue placeholder={data.automobile} className={``} />
         </SelectTrigger>
         <SelectContent>
           {handleSelectLabel.map((item) => (
-            <SelectItem key={item} value={item}>{item}</SelectItem>
+            <SelectItem key={item} value={item}>
+              {item}
+            </SelectItem>
           ))}
         </SelectContent>
       </Select>
