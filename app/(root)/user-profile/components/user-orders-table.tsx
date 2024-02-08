@@ -14,11 +14,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import axios from "axios";
-import { useRouter } from "next/navigation";
-import { toast } from "sonner";
-import { UserOrdersColumn } from "../types";
 
 interface UserOrdersTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
