@@ -1,9 +1,5 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-
-import { Automobile, Order, OrderItem, Service } from "@prisma/client";
-import { Decimal } from "@prisma/client/runtime";
-import { FormattedAutomobile, FormattedService } from "@/types";
 import { toast } from "sonner";
 
 export type cartItem = {
