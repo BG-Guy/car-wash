@@ -9,7 +9,7 @@ export type AdminOrderColumn = {
   status: string;
   isPaid: string;
   services: string;
-  price: string;
+  totalPrice: string;
   username: string;
   id: string;
 };
