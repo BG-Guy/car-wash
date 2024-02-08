@@ -1,9 +1,9 @@
 "use client";
-import { FormattedOrder } from "@/app/types";
 import { AlertModal } from "@/components/modals/alert-modal";
 import { OrderSummaryModal } from "@/components/modals/order-summary-modal";
 import { Alert } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
+import { FormattedOrder } from "@/types";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
