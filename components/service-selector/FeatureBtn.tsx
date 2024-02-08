@@ -1,5 +1,5 @@
 "use client";
-import { ServiceColumn } from "@/app/(root)/services/components/column";
+import { ServiceColumn } from "@/app/(root)/admin/services/types";
 import useCart from "@/hooks/use-cart";
 import { MouseEventHandler, useState } from "react";
 

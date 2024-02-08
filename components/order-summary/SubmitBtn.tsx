@@ -4,13 +4,13 @@ import axios from "axios";
 import { useState } from "react";
 // import { Toaster } from "@/components/ui/sonner";
 import { Button } from "../ui/button";
-import useCart from "@/hooks/use-cart";
+import useCart, { cartItem } from "@/hooks/use-cart";
 import { AlertModal } from "../modals/alert-modal";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 type Order = {
-  items: OrderItem[];
+  items: cartItem[];
   totalPrice: number;
 };
 
@@ -24,7 +24,7 @@ const SubmitBtn: React.FC<SubmitBtnProps> = ({ orderData, className }) => {
   const router = useRouter();
 
   const isValid = () => {
-    return orderData.items.some((item: OrderItem) => item.type);
+    return orderData.items.some((item: cartItem) => item.type);
   };
   const cart = useCart();
 
@@ -34,7 +34,7 @@ const SubmitBtn: React.FC<SubmitBtnProps> = ({ orderData, className }) => {
 
   const [loading, setLoading] = useState(false);
 
-  const orderDataItemIds = orderData.items.map((orderDataItem: OrderItem) => {
+  const orderDataItemIds = orderData.items.map((orderDataItem: cartItem) => {
     return orderDataItem.id;
   });
 

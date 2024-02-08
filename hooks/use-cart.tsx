@@ -6,9 +6,17 @@ import { Decimal } from "@prisma/client/runtime";
 import { FormattedAutomobile, FormattedService } from "@/types";
 import { toast } from "sonner";
 
+export type cartItem = {
+  id: string;
+  type?: string;
+  name?: string;
+  price: string;
+  description: string;
+};
+
 interface CartStore {
   removeAll: any;
-  items: (FormattedAutomobile | FormattedService)[];
+  items: cartItem[];
   totalPrice: number;
   addItem: any;
   removeItem: (id: string) => void;

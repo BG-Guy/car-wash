@@ -2,9 +2,10 @@ import { FormattedAutomobile, FormattedService } from "@/types";
 import { IoMdClose } from "react-icons/io";
 
 import React from "react";
+import { cartItem } from "@/hooks/use-cart";
 
 interface CartBtnProps {
-  item: FormattedAutomobile | FormattedService;
+  item: cartItem;
   onRemove: (id: string) => void;
 }
 
