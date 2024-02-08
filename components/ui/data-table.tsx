@@ -18,9 +18,9 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
-import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { AutomobileColumn } from "@/app/(root)/automobiles/components/column";
+import { toast } from "sonner";
+import { AutomobileColumn } from "@/app/(root)/admin/automobiles/types";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

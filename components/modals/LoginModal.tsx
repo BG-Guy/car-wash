@@ -11,7 +11,6 @@ import Modal from "./Modal";
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import { Heading } from "../ui/heading";
-import ModalInput from "../ui/modal-input";
 import ModalButton from "../ui/modal-button";
 import { z } from "zod";
 import { LoginSchema } from "@/schemas";
