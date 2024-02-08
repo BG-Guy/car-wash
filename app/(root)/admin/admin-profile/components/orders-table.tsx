@@ -63,7 +63,7 @@ export function OrdersTable<TData, TValue>({
       const updatePromises = changedOrder.map(async (item) => {
         const formattedItem = {
           ...item,
-          price: parseFloat(item.price.replace("$", "")),
+          price: parseFloat(item.totalPrice.replace("$", "")),
         };
         await axios.patch(`/api/order/${formattedItem.id}`, formattedItem);
       });
