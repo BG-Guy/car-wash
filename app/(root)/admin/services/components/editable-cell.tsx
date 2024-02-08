@@ -2,7 +2,21 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect, useState } from "react";
 
-const EditableCell = ({ getValue, row, column, table, isDescription }) => {
+interface EditableCellProps {
+  getValue: any;
+  row: any;
+  column: any;
+  table: any;
+  isDescription: any;
+}
+
+const EditableCell: React.FC<EditableCellProps> = ({
+  getValue,
+  row,
+  column,
+  table,
+  isDescription,
+}) => {
   const initialValue = getValue();
   const [value, setValue] = useState(initialValue);
 
