@@ -13,18 +13,6 @@ export const getAccountByUserId = async (userId: string) => {
   }
 };
 
-export const getPasswordResetTokenByToken = async (token: string) => {
-  try {
-    const passwordResetToken = await prismadb.passwordResetToken.findUnique({
-      where: { token },
-    });
-
-    return passwordResetToken;
-  } catch {
-    return null;
-  }
-};
-
 export const getCurrentUser = async () => {
   const session = await auth();
 
@@ -35,55 +23,6 @@ export const checkIsAdmin = async () => {
   const session = await auth();
   const isAdmin = session?.user?.role === "ADMIN";
   return isAdmin;
-};
-
-export const getPasswordResetTokenByEmail = async (email: string) => {
-  try {
-    const passwordResetToken = await prismadb.passwordResetToken.findFirst({
-      where: { email },
-    });
-
-    return passwordResetToken;
-  } catch {
-    return null;
-  }
-};
-
-export const getTwoFactorConfirmationByUserId = async (userId: string) => {
-  try {
-    const twoFactorConfirmation =
-      await prismadb.twoFactorConfirmation.findUnique({
-        where: { userId },
-      });
-
-    return twoFactorConfirmation;
-  } catch {
-    return null;
-  }
-};
-
-export const getTwoFactorTokenByToken = async (token: string) => {
-  try {
-    const twoFactorToken = await prismadb.twoFactorToken.findUnique({
-      where: { token },
-    });
-
-    return twoFactorToken;
-  } catch {
-    return null;
-  }
-};
-
-export const getTwoFactorTokenByEmail = async (email: string) => {
-  try {
-    const twoFactorToken = await prismadb.twoFactorToken.findFirst({
-      where: { email },
-    });
-
-    return twoFactorToken;
-  } catch {
-    return null;
-  }
 };
 
 export const getUserByEmail = async (email: string) => {
@@ -101,30 +40,6 @@ export const getUserById = async (id: string) => {
     const user = await prismadb.user.findUnique({ where: { id } });
 
     return user;
-  } catch {
-    return null;
-  }
-};
-
-export const getVerificationTokenByToken = async (token: string) => {
-  try {
-    const verificationToken = await prismadb.verificationToken.findUnique({
-      where: { token },
-    });
-
-    return verificationToken;
-  } catch {
-    return null;
-  }
-};
-
-export const getVerificationTokenByEmail = async (email: string) => {
-  try {
-    const verificationToken = await prismadb.verificationToken.findFirst({
-      where: { email },
-    });
-
-    return verificationToken;
   } catch {
     return null;
   }
