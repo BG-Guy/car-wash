@@ -1,8 +1,8 @@
 "use client";
-import { AutomobileColumn } from "@/app/(root)/automobiles/components/column";
 import useCart from "@/hooks/use-cart";
 import { MouseEventHandler, useState } from "react";
 import { Card } from "../ui/card";
+import { AutomobileColumn } from "@/app/(root)/admin/automobiles/types";
 
 interface AutomobileBtnProps {
   automobileData: AutomobileColumn;

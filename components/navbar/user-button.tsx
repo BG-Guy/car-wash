@@ -1,18 +1,13 @@
 "use client";
-import { User } from "next-auth";
-import Link from "next/link";
 import UserMenu from "./user-menu";
-import { Button } from "../ui/button";
-import { signOut } from "next-auth/react";
-import { useRouter } from "next/router";
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import { useCallback, useState } from "react";
 import useRentModal from "@/hooks/useRentModal";
-import { SafeUser } from "@/types";
+import { ExtendedUser } from "@/next-auth";
 
 type Props = {
-  user: SafeUser | null | undefined | User;
+  user: null | undefined | ExtendedUser;
   pagetype: string;
 };
 

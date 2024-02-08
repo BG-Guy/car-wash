@@ -1,22 +1,14 @@
 import React from "react";
 import Logo from "./Logo";
 import { MainNav } from "./main-nav";
-import { SafeUser } from "@/types";
 import UserButton from "./user-button";
 import { GiHamburgerMenu } from "react-icons/gi";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { User } from "next-auth";
+import { ExtendedUser } from "@/next-auth";
 
 interface MobileNavProps {
-  user: SafeUser | null | undefined | User;
+  user: null | undefined | ExtendedUser;
   className: string;
 }
 

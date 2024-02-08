@@ -1,4 +1,5 @@
-import { Automobile, Order, Service, User } from "@prisma/client";
+import { Automobile, Service } from "@prisma/client";
+import { User } from "next-auth";
 
 export type SafeUser = Omit<
   User,

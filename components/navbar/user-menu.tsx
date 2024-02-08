@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { User } from "next-auth";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,11 +6,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
-import { SafeUser } from "@/types";
 import { signOut } from "next-auth/react";
+import { ExtendedUser } from "@/next-auth";
 
 interface Props {
-  user: SafeUser;
+  user: ExtendedUser;
 }
 
 export default function UserMenu({ user }: Props) {

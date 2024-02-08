@@ -1,5 +1,4 @@
 import { MainNav } from "@/components/navbar/main-nav";
-import { GiHamburgerMenu } from "react-icons/gi";
 
 import Logo from "./Logo";
 import Container from "../container";

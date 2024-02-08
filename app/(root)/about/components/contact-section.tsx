@@ -1,9 +1,6 @@
-import { BackgroundImage } from "@/components/background-image";
 import React from "react";
-import SVG from "@/blob-scene-haikei.svg";
 import { JosephineSans, openSans } from "@/fonts";
 import { ContactForm } from "./contact-form";
-import Image from "next/image";
 
 export const ContactUsSection = () => {
   const imageUrl =

@@ -1,14 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
-
 import { cn } from "@/lib/utils";
-import { SafeUser } from "@/types";
+import { ExtendedUser } from "@/next-auth";
 
 interface MainNavProps extends React.HTMLAttributes<HTMLElement> {
   // Add the user prop to the MainNavProps
-  user: SafeUser | null | undefined;
+  user: null | undefined | ExtendedUser;
 }
 
 export function MainNav({ className, user, ...props }: MainNavProps) {
