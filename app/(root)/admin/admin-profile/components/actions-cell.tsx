@@ -4,12 +4,12 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { MdOutlineCancel } from "react-icons/md";
-import { OrderColumn } from "./column";
+import { AdminOrderColumn } from "./column";
 import { Trash } from "lucide-react";
 import { toast } from "sonner";
 
 interface ActionsCellProps {
-  data: OrderColumn;
+  data: AdminOrderColumn;
 }
 
 export const ActionsCell: React.FC<ActionsCellProps> = ({ data }) => {
