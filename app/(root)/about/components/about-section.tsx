@@ -4,7 +4,7 @@ import Container from "@/components/container";
 
 export const AboutSection = () => {
   return (
-    <div className="svg-background h-screen">
+    <div className="svg-background lg:h-screen">
       <Container>
         <ContactUsSection />
       </Container>
