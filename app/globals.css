@@ -117,6 +117,25 @@
   height: 0;
 }
 
+.hero-shadow {
+  background: #000000;
+  background: radial-gradient(
+    circle farthest-side at bottom left,
+    #000000 0%,
+    rgba(0, 0, 0, 0.08) 80%
+  );
+  background: -webkit-radial-gradient(
+    circle farthest-side at bottom left,
+    #000000 0%,
+    rgba(0, 0, 0, 0.08) 80%
+  );
+  background: -moz-radial-gradient(
+    circle farthest-side at bottom left,
+    #000000 0%,
+    rgba(0, 0, 0, 0.08) 80%
+  );
+}
+
 .IMAGE {
   aspect-ratio: 1/1;
 }

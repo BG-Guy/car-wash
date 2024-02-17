@@ -9,11 +9,7 @@ export default async function Home() {
 
   return (
     <Container>
-      {currentUser ? (
-        <Dashboard user={currentUser} />
-      ) : (
-        <div>PLEASE LOG IN</div>
-      )}
+      <Dashboard user={currentUser} />
     </Container>
   );
 }

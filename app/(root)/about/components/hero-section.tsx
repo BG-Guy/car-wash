@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { heroSectionData } from "../data";
-import { RubikMonoOne, openSans } from "@/fonts";
+import Image from "next/image";
 
 export const HeroSection = () => {
   const [isOpen, setIsOpen] = useState("");
@@ -36,16 +36,25 @@ export const HeroSection = () => {
     return heroSectionData.map((data) => {
       return (
         <div
-          className={`flex flex-col cursor-pointer bg-cover bg-no-repeat bg-center 
-          transition-all duration-300 ease-in-out overflow-hidden shadow-inset ${handleExpand(
+          className={`relative cursor-pointer bg-cover bg-no-repeat bg-center 
+          transition-all duration-300 ease-in-out overflow-hidden ${handleExpand(
             data.title
           )}`}
-          style={{
-            backgroundImage: `url(${data.url})`,
-          }}
+          // style={{
+          //   backgroundImage: `url(${data.url})`,
+          // }}
           onClick={() => handleToggle(data.title)}
           key={data.url}
         >
+          <Image
+            src={data.url}
+            alt={data.url}
+            className="object-cover cursor-pointer hero-shadow"
+            fill={true}
+            sizes="(min-width: 1040px) 25vw, 100vw"
+          />
+          <div className="absolute inset-0 shadow-inset"></div>
+
           {/* <h1 className="text-3xl flex justify-center items-center text-white">
             {data.title}
           </h1>

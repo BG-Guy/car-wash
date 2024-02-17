@@ -16,10 +16,11 @@ export const CartBtn: React.FC<CartBtnProps> = ({ item, onRemove }) => {
       {name}
       <button key={item.id} className="absolute left-0 top-0">
         <IoMdClose
-          color="black"
+          // color="black"
+          fill="black"
           size={12}
           onClick={() => onRemove(item.id)}
-          className="rounded-3xl transition hover:bg-red-600 mr-3 borderData-[2px] borderData-gray-950"
+          className="rounded-3xl transition mr-3 borderData-[2px] borderData-gray-950"
         />
       </button>
     </div>

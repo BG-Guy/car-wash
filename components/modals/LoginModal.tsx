@@ -2,7 +2,7 @@
 import { useCallback, useState, useTransition } from "react";
 
 import { signIn } from "next-auth/react";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -138,7 +138,9 @@ const LoginModal = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => signIn("google")}
+        onClick={() =>
+          signIn("google", { callbackUrl: "http://localhost:3000/" })
+        }
       />
       <div
         className="

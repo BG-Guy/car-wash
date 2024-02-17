@@ -6,8 +6,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
-import { signOut } from "next-auth/react";
+import { signOut } from "@/auth";
 import { ExtendedUser } from "@/next-auth";
+import { logout } from "@/functions/auth/logout";
 
 interface Props {
   user: ExtendedUser;
@@ -41,7 +42,7 @@ export default function UserMenu({ user }: Props) {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="center">
           <DropdownMenuItem>
-            <button onClick={() => signOut()}>SIGN OUT</button>
+            <button onClick={() => logout()}>SIGN OUT</button>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link href={getUserProfileHref()}>User Profile</Link>

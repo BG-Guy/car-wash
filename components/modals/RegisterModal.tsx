@@ -123,9 +123,9 @@ const RegisterModal = () => {
           </div>
           <FormError message={error} />
           <FormSuccess message={success} />
-          <Button disabled={isPending} type="submit" className="w-full">
+          {/* <Button disabled={isPending} type="submit" className="w-full">
             Create an account / TEST
-          </Button>
+          </Button> */}
         </form>
       </Form>
     </div>

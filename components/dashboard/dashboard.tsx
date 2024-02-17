@@ -1,34 +1,23 @@
-import { SafeUser } from "@/types";
 import OrderController from "../order-controller/OrderController";
 import OrderSummary from "../order-summary/OrderSummary";
-import OrdersData from "../orders-data/OrderData";
 import Header from "./Header";
 import { cn } from "@/lib/utils";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Button } from "../ui/button";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { IoCartSharp } from "react-icons/io5";
-import { User } from "next-auth";
-import { JosephineSans, LuckiestGuy } from "@/fonts";
+import { ExtendedUser } from "@/next-auth";
 
 interface DashboardProps {
   className?: string;
-  user: SafeUser | null | User;
+  user?: ExtendedUser;
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ className, user }) => {
   return (
     <div className={cn(className, "p-2 gap-4 w-full flex flex-col h-fit ")}>
       <Header
-        message={`Welcome Back ${user?.name}`}
+        message={`${
+          user ? `Welcome Back ${user?.name}` : "Welcome! Please Login!"
+        }`}
         type="main"
         align="start"
         className={`h-24 m-0 billboard-background font-rubik flex items-center justify-center`}

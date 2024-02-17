@@ -37,7 +37,6 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
         onConfirm={onDelete}
         loading={loading}
       />
-      <Edit className="cursor-pointer" />
       <Trash className="cursor-pointer" onClick={() => setOpen(true)} />
     </div>
   );
