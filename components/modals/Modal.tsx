@@ -72,7 +72,8 @@ const Modal: React.FC<ModalProps> = ({
         className="
           justify-center 
           items-center 
-          flex 
+          flex
+          
           overflow-x-hidden 
           overflow-y-auto 
           fixed 
@@ -87,9 +88,9 @@ const Modal: React.FC<ModalProps> = ({
           className="
           relative 
           w-full
-          md:w-4/6
-          lg:w-3/6
-          xl:w-2/5
+          md:w-[400px]
+          -lg:w-3/6
+          -xl:w-2/5
           my-6
           mx-auto 
           h-full 
