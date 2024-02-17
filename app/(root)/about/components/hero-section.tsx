@@ -68,7 +68,7 @@ export const HeroSection = () => {
             {data.title}
           </h1>
           <div
-            className={`text-white p-2 font-sans text-[24px] lg:text-[36px] lg:w-1/2 transition-all duration-300 delay-100  ease-in-out relative ${handleDescription(
+            className={`text-white p-2 font-sans text-[24px] lg:text-[36px] lg:w-[600px] transition-all duration-300 delay-100  ease-in-out relative ${handleDescription(
               data.title
             )}`}
           >
